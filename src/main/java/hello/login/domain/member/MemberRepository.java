@@ -14,7 +14,7 @@ public class MemberRepository {
         member.setId(++sequence);
         log.info("save: member={}", member);
 
-        store.put(member.getId(), member);
+        store.put(member.getId(), member); //이걸 안해서 로그인을 못했었음! 잘 기억
 
         return member;
     }
