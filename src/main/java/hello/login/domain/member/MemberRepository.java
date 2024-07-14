@@ -9,12 +9,12 @@ import java.util.*;
 @Repository
 public class MemberRepository {
     private static Map<Long, Member> store = new HashMap<>(); //static 사용
-    private static long sequence = 0L; //static 사용
+    private static long sequence = 0L;
     public Member save(Member member) {
         member.setId(++sequence);
         log.info("save: member={}", member);
 
-        store.put(member.getId(), member); //이걸 안해서 로그인을 못했었음! 잘 기억
+        store.put(member.getId(), member); //이걸 안해서 로그인을 못했었음! 잘 기억 항상 풋하기
 
         return member;
     }
