@@ -20,7 +20,7 @@ public class HomeController {
 
     private final MemberRepository memberRepository;
 
-    //    @GetMapping("/")
+    //    @GetMapping("/")  안해줘도 됨
     public String home() {
         return "home";
     }
